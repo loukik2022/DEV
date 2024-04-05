@@ -30,17 +30,23 @@ export default function Chat() {
    return (
       <div className="chat">
          <div className="chat-output">
-            {chatHistory.map((chat, index) => (
-               <div key={index} className={`chat-output-container-${chat.role}`}>
-                  <div className="avatar">
-                     {chat.role === 'bot' ? <img className="logo" src="openai.png" alt="openai logo" style={{backgroundColor: "#0da37f"}} /> : <img className="logo" src="user.png" alt="openai logo" style={{backgroundColor: "white", width: "40px", height: "40px"}} />}
-                  </div>
-                  <div className={`message`}>
-                     {chat.message}
-                  </div>
+         {chatHistory.map((chat, index) => (
+            <div key={index} className={`chat-output-container-${chat.role}`}>
+               <div className={`avatar ${chat.role}`}>
+               {chat.role === 'bot'
+                  ?
+                  <img className="logo" src="openai.png" alt="openai logo" style={{backgroundColor: "#0da37f"}} />
+                  :
+                  <img className="logo" src="user.png" alt="user logo" style={{backgroundColor: "white", width: "40px", height: "40px"}} />
+               }
                </div>
-            ))}
+               <div className={`message ${chat.role}`}>
+               {chat.message}
+               </div>
+            </div>
+         ))}
          </div>
+
 
          <div className="chat-input">
             <form onSubmit={handleSubmit}>

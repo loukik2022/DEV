@@ -126,33 +126,38 @@
 }
 
 .message.user {
-    background-color: #0da37f; /* Example background color for user messages */
-    color: white; /* Example text color for user messages */
-    order: 2; /* Makes sure user message is positioned last (to the right) within its flex container */
+  background-color: #0da37f; /* Example background color for user messages */
+  color: white; /* Example text color for user messages */
+  order: 1; /* Makes sure user message is positioned first (to the left) within its flex container */
 }
 
 .message.bot {
-    background-color: #444654; /* Example background color for bot messages */
-    color: white; /* Example text color for bot messages */
-    order: 1; /* Makes sure bot message is positioned first (to the left) within its flex container */
+  background-color: #444654; /* Example background color for bot messages */
+  color: white; /* Example text color for bot messages */
+  order: 2; /* Makes sure bot message is positioned last (to the right) within its flex container */
 }
 
 .avatar {
-  background: #0da37f;
-  border-radius: 30%;
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 10px;
+background: #0da37f;
+border-radius: 30%;
+width: 40px;
+height: 40px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+margin: 0 10px;
+order: 2; /* position Bot Avatar to the right */
+}
+
+.avatar.user{
+order: 3; /* position User Avatar to the right */
 }
 
 .logo {
-  background-size: contain;
-  border-radius: 30%;
-  width: 30px;
-  height: 30px;
+background-size: contain;
+border-radius: 30%;
+width: 30px;
+height: 30px;
 }
 
 
