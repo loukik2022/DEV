@@ -1,8 +1,9 @@
 
+
 .App {
   text-align: center;
   display: flex;
-  background-color: #282c34;
+  background-color: #343541;
   color: white;
   position: absolute;
   top:0; left: 0; bottom: 0; right: 0; 
@@ -90,11 +91,11 @@
   flex: 1;
   background-color: #343541;
   position: relative;
-  /* max-height: 720px; */
   overflow-y: auto;
+  margin-left: 16.5%;
+  margin-right: 16.5%;
+  margin-bottom: 5%;
 }
-
-/*---------------------------------------------- Chat - chat-output ----------------------------------------------*/
 
 .chat-output {
   text-align: left;
@@ -104,65 +105,56 @@
 .chat-output-container-bot {
   display: flex;
   align-items: center;
-  width: 100%;
 }
 
 .chat-output-container-user {
-    justify-content: flex-end; /* Aligns the user message and avatar to the right */
+    justify-content: flex-end;
 }
 
 .chat-output-container-bot {
-    justify-content: flex-start; /* Aligns the bot message and avatar to the left */
+    justify-content: flex-start;
 }
 
 .message {
-    padding-top: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 20px;
-    max-width: 55%;
-    background-color: #444654; /* Example background color for bot messages */
-    color: white; /* Example text color for bot messages */
+    margin: 10px 0;
+    padding: 20px;
+    max-width: 60%;
+    background-color: #0da37f;
+    color: white;
     border-radius: 5px;
-    margin-left: 2%;
-    margin-right: 25%;
+    word-break: break-word;  /* allows the word to break and go to the next line */
 }
 
 .message.user {
     background-color: #0da37f; /* Example background color for user messages */
     color: white; /* Example text color for user messages */
+    order: 2; /* Makes sure user message is positioned last (to the right) within its flex container */
 }
 
 .message.bot {
     background-color: #444654; /* Example background color for bot messages */
     color: white; /* Example text color for bot messages */
+    order: 1; /* Makes sure bot message is positioned first (to the left) within its flex container */
 }
 
 .avatar {
   background: #0da37f;
-  border-radius:30%;
+  border-radius: 30%;
   width: 40px;
   height: 40px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-left: 20%;
+  margin: 0 10px;
 }
 
 .logo {
   background-size: contain;
-  border-radius:30%;
+  border-radius: 30%;
   width: 30px;
   height: 30px;
 }
 
-/* .message {
-  padding-top: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 20px;
-  max-width: 55%;
-} */
 
 /*---------------------------------------------- Chat - chat-input ----------------------------------------------*/
 

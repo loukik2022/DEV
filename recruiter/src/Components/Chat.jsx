@@ -1,22 +1,5 @@
 import { useState } from "react";
 
-// const fetchSendPrompt = async (userPrompt) => {
-//    try {
-//       const response = await fetch("http://localhost:5174/", {
-//          method: "POST",
-//          headers: {
-//             "Content-Type": "application/json",
-//          },
-//          body: JSON.stringify({ userPrompt }),
-//       });
-//       // console.log(response)
-//       const data = await response.json();
-//       return data;
-//    } catch (error) {
-//       console.error(error);
-//       return null;
-//    }
-// };
 
 export default function Chat() {
    // state for sending the prompt to the backend
